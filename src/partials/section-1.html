@@ -1,30 +1,84 @@
-<!--1 Первый экран.-->
-<div class="main-banner">
-  <div class="container">
-    <div class="main-banner__left">
-      <img class="logo" src="./img/logo.png" alt="Логотип Гейм студии">
-      <p>«Край воинов» – новая браузерная стратегия в режиме реального времени.  </p>
-      <p>Приглашаем Вас на просторы Титании – планеты, наполненной магией и сталью мечей. Здесь вы окунётесь в мир придворных интриг и войны альянсов, возведёте замки и встанете во главе войска, раскроете древние тайны и... заработаете реальные деньги!</p>
-    </div>
-    <div class="main-banner__right">
-      <div class="main-banner__video">
-        <div class="icon-video">
-          <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 11L0 22L0 0M15 11L2 3.47L2 18.53" fill="white"/>
-            </svg>
+<!--1  экран формы-->
+<img style="width: 1600px; height: 1200px;     position: absolute;
+left: 50%;
+top: 50%;
+opacity: .5;opacity: 0;
+transform: translate(-50%, -50%);" src="https://raw.githubusercontent.com/jm-program/css-task/master/template.jpg"
+  alt="">
+<section class="section">
+  <div class="container ">
+    <div class="section__inner">
+      <div class="section__item">
+        <img src="img/bg.jpg" alt="">
+      </div>
 
+      <div class="section__item">
+        <div class="block-form">
+
+          <h2 class="title">Get iintoo it today</h2>
+          <div class="description">There is no charge or obligation upon registration</div>
+
+          <div class="btn-group">
+            <button class="btn btn-fb">Register with Faceebook</button>
+            <button class="btn btn-in">Register with Linkedln</button>
+          </div>
+
+
+          <div class="or">or</div>
+
+          <form action="#">
+
+            <div class="btn-group">
+              <label class="field-input" for="email"><span>Email</span>
+                <input type="text" name="mail" placeholder="gus.goodwin@gmail.com" id="email" required>
+              </label>
+
+              <label class="field-input" for="email"><span>Phone</span>
+                <input type="text" name="mail" placeholder="" id="email" required>
+              </label>
+            </div>
+
+
+            <h3>What type of investor are you</h3>
+            <p>Select the type of investor you are below</p>
+
+
+            <div class="form-radio">
+              <input id="radio-1" type="radio" name="radio" value="1" checked>
+              <label for="radio-1">Radio button 1</label>
+            </div>
+
+            <div class="form-radio">
+              <input id="radio-2" type="radio" name="radio" value="2">
+              <label for="radio-2">Radio button 2</label>
+            </div>
+
+            <div class="form-radio">
+              <input id="radio-3" type="radio" name="radio" value="3">
+              <label for="radio-3">Radio button 3</label>
+            </div>
+
+            <div class="form-radio">
+              <input id="radio-4" type="radio" name="radio" value="4" disabled>
+              <label for="radio-4">Radio disabled</label>
+            </div>
+
+
+            <div class="alert">
+              I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in common.
+            </div>
+
+            <label><input name="example_checkbox" type="checkbox"> I agree to the terms and receiving notifications from
+              iintoo
+              <a href="#">View full terms</a></label>
+
+            <button class="btn">Create Account</button>
+          </form>
         </div>
+
       </div>
     </div>
 
-
-
-  </div>
-  <div class="main-banner__bottom">
-    <div class="container">
-      <p>«Край воинов» ждёт – надевайте доспехи и вперёд, <span>на тропу победы!</span></p>
-    </div>
-
   </div>
 
-</div>
+</section>

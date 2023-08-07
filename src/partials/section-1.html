@@ -30,38 +30,43 @@ transform: translate(-50%, -50%);" src="https://raw.githubusercontent.com/jm-pro
 
             <div class="btn-group">
               <label class="field-input" for="email"><span>Email</span>
-                <input type="text" name="mail" placeholder="gus.goodwin@gmail.com" id="email" required>
+                <input class="field-input__item" value="gus.goodwin@gmail.com" type="text" name="mail" placeholder=""
+                  id="email" required>
               </label>
 
               <label class="field-input" for="email"><span>Phone</span>
-                <input type="text" name="mail" placeholder="" id="email" required>
+                <input checked class="field-input__item" type="text" name="mail" placeholder="" id="email" required>
               </label>
             </div>
 
-
-            <h3>What type of investor are you</h3>
-            <p>Select the type of investor you are below</p>
-
-
-            <div class="form-radio">
-              <input id="radio-1" type="radio" name="radio" value="1" checked>
-              <label for="radio-1">Radio button 1</label>
+            <div class="block-question">
+              <h3>What type of investor are you?</h3>
+              <p>Select the type of investor you are below</p>
             </div>
 
+            <!--https://snipp.ru/html-css/style-radio#link-standartnye-elementy-->
             <div class="form-radio">
-              <input id="radio-2" type="radio" name="radio" value="2">
-              <label for="radio-2">Radio button 2</label>
+              <div class="form-radio__item">
+                <input id="radio-1" type="radio" name="radio" value="1" checked>
+                <label for="radio-1">Radio button 1</label>
+              </div>
+
+              <div class="form-radio__item">
+                <input id="radio-2" type="radio" name="radio" value="2">
+                <label for="radio-2">Radio button 2</label>
+              </div>
+
+              <div class="form-radio__item">
+                <input id="radio-3" type="radio" name="radio" value="3">
+                <label for="radio-3">Radio button 3</label>
+              </div>
+
+              <div class="form-radio__item">
+                <input id="radio-4" type="radio" name="radio" value="4" disabled>
+                <label for="radio-4">Radio disabled</label>
+              </div>
             </div>
 
-            <div class="form-radio">
-              <input id="radio-3" type="radio" name="radio" value="3">
-              <label for="radio-3">Radio button 3</label>
-            </div>
-
-            <div class="form-radio">
-              <input id="radio-4" type="radio" name="radio" value="4" disabled>
-              <label for="radio-4">Radio disabled</label>
-            </div>
 
 
             <div class="alert">

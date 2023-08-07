@@ -32,27 +32,41 @@ main{
   color: #fff;
   position: relative;
   margin-bottom: 10px;
+  font-size: 15px;
 }
 .btn:nth-child(2n){
   margin-right: 0;
 }
 
+.btn-fb, .btn-in{
+  &::before{
+    content: "";
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    top: 11px;
+  }
+}
+
+
 .btn-fb{
   background-color: #255A9B;
   &::before{
-    content: "";
-    width: 10px;
-    height: 15px;
+    left: 8px;
+    width: 15px;
+    height: 20px;
     background-image: url(../img/svg/facebook.svg);
   }
 }
 .btn-in{
   background-color: #0076B6;
   &::before{
-    content: "";
-    width: 10px;
-    height: 15px;
+    width: 19px;
+    height: 18px;
     background-image: url(../img/svg/linkedin.svg);
+    left: 14px;
   }
 }
 .btn-group{
@@ -61,7 +75,7 @@ main{
 
 .or{
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 10px;
   text-align: center;
   position: relative;
   display: flex;
@@ -70,6 +84,7 @@ main{
   max-width: 250px;
   width: 100%;
   margin: 0 auto;
+  font-weight: 500;
 
     margin-bottom: 48px;
 
@@ -78,15 +93,47 @@ main{
     content: "";
     height: 1px;
     width: 100%;
-    background-color: #ccc;
+    background-color: #EEEEEE;
     display: inline-block;
   }
-  &::before{
+}
 
-
+.field-input{
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  &:nth-child(2n){
+    margin-right: 0;
   }
-  &::after{
-
-
+  span{
+    position: absolute;
+    color:  #96A5B1;
+    font-size: 14px;
+    left: 8px;
+    top: 4px;
+    font-weight: 500;
   }
+  .field-input__item{
+    border: 1px solid #EEEEEE;
+    width: 248px;
+    height: 58px;
+    padding: 5px 8px;
+    padding-top: 18px;
+    &:hover, &:focus{
+      border-left: 1px solid #3698FB;
+      outline: none;
+    }
+  }
+}
+h3{
+  margin: 0;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+p{
+  margin-top: 0;
+  font-size: 14px;
+}
+.block-question{
+  padding-top: 18px;
 }

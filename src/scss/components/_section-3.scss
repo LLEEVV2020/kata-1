@@ -1,0 +1,75 @@
+/*3 Расы*/
+.races{
+  padding-top: 40px;
+  padding-bottom: 69px;
+}
+
+
+.races-grid{
+  display: flex;
+  gap: 10px;
+}
+.races-item{
+  flex: 1;
+  background: #000000;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+}
+
+.races-title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  height: 62px;
+  margin-bottom: 64px;
+}
+.races-img{
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 64px;
+
+  img{
+    width: 100%;
+  }
+}
+
+.races-text {
+  margin-bottom: 94px;
+}
+
+@media screen and (max-width: 1200px){
+
+  .races-grid{
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+  .races-item{
+    width: 32.33%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 32.33%;
+  }
+
+}
+
+@media screen and (max-width: 750px){
+  .races-item{
+    width:49.2%;
+    flex-basis: 49.2%;
+  }
+}
+@media screen and (max-width: 500px){
+  .races-item{
+    width:100%;
+    flex-basis: 100%;
+  }
+  .races-img{
+    max-width: 165px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

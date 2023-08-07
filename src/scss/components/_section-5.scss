@@ -1,0 +1,96 @@
+/*5 План реализации*/
+.plan{
+
+  .title{
+    margin-bottom: 88px;
+  }
+}
+
+.plan-numbers{
+  font-size: 18px;
+  margin-bottom: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  &::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #fff;
+    opacity: .2;
+  }
+  span{
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+
+.plan-title{
+  margin-bottom: 16px;
+}
+.plan-text{
+  opacity: .5;
+}
+
+.plan-container{
+  display: flex;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.plan-imgs{
+  display: flex;
+  gap: 29px;
+}
+.plan-img{
+  background: rgba(255, 255, 255, 0.05);
+  height: 400px;
+  flex: 1;
+}
+
+.plan{
+  .plan-img:last-child{
+    max-width: 32%;
+  }
+}
+
+
+.plan-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 992px){
+  .plan{
+    .plan-img:last-child{
+      max-width: inherit;
+    }
+  }
+
+}
+
+@media screen and (max-width: 700px){
+  .plan-imgs{
+    display: block;
+  }
+  .plan-img + .plan-img{
+    margin-top: 29px;
+  }
+  .plan-container{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 501px){
+  .plan-img{
+    height: 300px;
+  }
+}

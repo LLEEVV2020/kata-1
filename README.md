@@ -5,4 +5,4 @@
 - npm i
 - gulp
 
-### Раместил вёрстку на домене [mosrembytrus.ru](https://mosrembytrus.ru/)
+### Раместил вёрстку на домене [mosrembytrus.ru](//mosrembytrus.ru/)

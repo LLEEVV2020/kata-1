@@ -1,7 +1,6 @@
 /*1 Первый экран, главный баннер*/
 main{
   position: relative;
-  margin-top: 200px;
 }
 .section__inner{
   box-shadow: 0px 0px 30px 40px rgba(0, 0, 0, 0.025);
@@ -9,13 +8,38 @@ main{
 
 }
 
+.section{
+  padding: 50px 0;
+}
+
+.logo{
+  position: absolute;
+  left: 48px;
+  top: 40px;
+  width: 138px;
+  height: 38px;
+  background-image: url(../img/svg/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .block-form{
   padding: 110px 72px;
   background-color: #fff;
 }
 .section__item{
+  position: relative;
   &:last-child{
     flex: 1;
+    min-width: 674px;
+  }
+  &:first-child{
+    &> img{
+      display: block;
+      object-fit: cover;
+      height: 100%;
+    }
   }
 }
 
@@ -72,7 +96,10 @@ main{
 .btn-group{
   margin-bottom: 40px;
 }
-
+.btn-primary{
+  background-color: #3698FB;
+border-radius: 4px;
+}
 .or{
   text-transform: uppercase;
   font-size: 10px;
@@ -109,7 +136,7 @@ main{
     position: absolute;
     color:  #96A5B1;
     font-size: 14px;
-    left: 8px;
+    left: 12px;
     top: 4px;
     font-weight: 500;
   }
@@ -117,9 +144,10 @@ main{
     border: 1px solid #EEEEEE;
     width: 248px;
     height: 58px;
-    padding: 5px 8px;
+    padding: 5px 12px;
     padding-top: 18px;
-    &:hover, &:focus{
+
+    &:focus{
       border-left: 1px solid #3698FB;
       outline: none;
     }
@@ -136,10 +164,14 @@ p{
 }
 .block-question{
   padding-top: 18px;
+  margin-bottom: 50px;
 }
 
 .form-radio{
   display:flex;
+  justify-content: space-between;
+  padding-right: 50px;
+  margin-bottom: 13px;
 }
 .form-radio__item {
 	margin-bottom: 10px;
@@ -166,7 +198,7 @@ p{
 	height: 18px;
 	position: absolute;
 	left: 0;
-	bottom: 1px;
+	bottom: 0;
 	background-color : #fff;
   border-radius: 50%;
   border: 2px solid #AFAFAF;
@@ -175,7 +207,10 @@ p{
 .form-radio__item label::after {
   content: "🛈";
   color: #AFAFAF;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 13px;
+  margin-left: 5px;
+  transform: translateY(1px);
 }
 
 /* Checked */
@@ -191,4 +226,134 @@ p{
 /* Disabled */
 .form-radio__item input[type=radio]:disabled + label:before {
 	filter: grayscale(100%);
+}
+
+
+
+.alert{
+  box-shadow: rgba(0, 0, 0, 0.12) 2px 3px 18px 0px;
+  background-color: #fff;
+  width: 260px;
+  padding: 8px 11px 12px;
+  font-size: 14px;
+  margin-bottom: 46px;
+  color: #AFAFAF;
+}
+
+.agreement{
+  color: #AFAFAF;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  margin-bottom: 44px;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.agreement::before{
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  margin-right: 5px;
+  transform: translateY(1px);
+}
+.agreement::after{
+  content: '\2713';
+  display: inline-block;
+  color: #3698FB;
+  font-size: 18px;
+  line-height: 13px;
+  transform: scale(0);
+  transition: 0.3s;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+input[type="checkbox"]:checked + .agreement::after{
+  transform: scale(1);
+}
+
+a{
+  color: #3698FB;
+  text-decoration: underline;
+}
+a:hover, a:focus{
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 1500px){
+  .section{
+    padding: 0;
+  }
+  .container {
+    max-width: 1500px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 940px){
+  .section__item{
+
+    &:first-child{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      & > img {
+        width: 100%;
+      }
+    }
+    &:last-child{
+
+      max-width: 674px;
+      min-width: inherit;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 120px;
+    }
+  }
+
+  .block-form{
+    padding: 70px 60px;
+  }
+}
+
+@media screen and (max-width: 700px){
+
+  .btn{
+    margin-right: 0;
+    display: block;
+    width: 100%;
+  }
+  .field-input{
+    margin-right: 0;
+    display: block;
+& + &{
+  margin-top: 20px;
+}
+    .field-input__item{
+      width: 100%;
+    }
+  }
+
+  .form-radio{
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .block-question{
+     padding-top: 0;
+  }
+}
+@media screen and (max-width: 500px){
+  .form-radio__item{
+    width: 100%;
+  }
 }

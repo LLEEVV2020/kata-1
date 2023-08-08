@@ -5,4 +5,4 @@
 - npm i
 - gulp
 
-### Раместил вёрстку на домене [mosrembytrus.ru](https://mosrembytrus.ru/webstorm/)
+### Раместил вёрстку на домене [mosrembytrus.ru](https://mosrembytrus.ru/)
